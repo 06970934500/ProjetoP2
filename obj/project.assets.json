@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\jesyl\\OneDrive\\Documentos\\cursojs\\teste\\Teste\\pizzaria2.csproj",
+      "projectUniqueName": "C:\\Users\\jesyl\\OneDrive\\Documentos\\arquivosVScode\\PIZZARIA4\\pizzaria2.csproj",
       "projectName": "pizzaria2",
-      "projectPath": "c:\\Users\\jesyl\\OneDrive\\Documentos\\cursojs\\teste\\Teste\\pizzaria2.csproj",
+      "projectPath": "C:\\Users\\jesyl\\OneDrive\\Documentos\\arquivosVScode\\PIZZARIA4\\pizzaria2.csproj",
       "packagesPath": "C:\\Users\\jesyl\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\jesyl\\OneDrive\\Documentos\\cursojs\\teste\\Teste\\obj\\",
+      "outputPath": "C:\\Users\\jesyl\\OneDrive\\Documentos\\arquivosVScode\\PIZZARIA4\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jesyl\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -76,9 +76,14 @@ namespace Client
                     var pag = double.Parse(Console.ReadLine());
                     //pagamentos
                         if(pag == 1){
-                            Pagamento pagamento = new Pagamento();
-                            pagamento.PagarComCartaoCredito($"Qual é o valor: \n {listaPizzaEsc2[pesc]}");}
-                    }       
+                                Pagamento.PagarEmDinheiro($"Qual é o valor:\nR${listaPizzaEsc2[pesc]}\nTOTAL PAGO: R${listaPizzaEsc2[pesc]}");
+                            }else if(pag == 2){
+                                 //Pagamento pagamento = new Pagamento();
+                                Pagamento.PagarComCartaoCredito($"Qual é o valor:\n R${listaPizzaEsc2[pesc]}\nTOTAL PAGO: R${listaPizzaEsc2[pesc]}");
+                            }else if(pag == 3){
+                                Pagamento.PagarComCartaoAlimentacao($"Qual é o valor:\n R${listaPizzaEsc2[pesc]}\nTOTAL PAGO: R${listaPizzaEsc2[pesc]}");
+                            }else{Console.WriteLine("Opção invalida");}
+                }     
                 
             else if(pe == 1)
             {

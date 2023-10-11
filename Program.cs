@@ -74,7 +74,7 @@ namespace Client
                     Console.WriteLine($"{pe} - Cliente: {nomeDoCliente} - Falta: R${listaPizzaEsc2[pesc]}");
                     Console.WriteLine("Escolha uma forma de pagamento? \n 1/Dinheiro \n2/Cartão de debito. \n3/vale-refeição.");
                     var pag = double.Parse(Console.ReadLine());
-                    //pagamentos
+                    //pagamentos de uma pizza
                         if(pag == 1){
                                 Pagamento.PagarEmDinheiro($"Qual é o valor:\nR${listaPizzaEsc2[pesc]}\nTOTAL PAGO: R${listaPizzaEsc2[pesc]}");
                             }else if(pag == 2){
@@ -112,12 +112,27 @@ namespace Client
                             Console.WriteLine($"O numero do(a) Cliente é {numeroDoCliente}.");
                             Console.WriteLine($"{listaPizzaEsc[pesc]}-RS{listaPizzaEsc2[pesc]}");
                             Console.WriteLine($"{listaPizzaEsc3[pesc3]}-RS{listaPizzaEsc4[pesc3]}");
-                        }
-                        else
-                        {
-                            Console.WriteLine($"Digite a opção correta");
-                            
-                        }
+                            //soma das entrada de valores
+                            double soma = Pagamento.Soma(listaPizzaEsc2[pesc], listaPizzaEsc4[pesc3]);
+                            //pergunta antes do pagamento
+                            Console.WriteLine($"Total: {soma}");
+                            Console.WriteLine($"Quanto falta para pagar: {soma}");
+                            Console.WriteLine("pago: NÃO");
+                            Console.WriteLine($"Qual é o numero do pedido:");
+                            Console.WriteLine($"{pe} - Cliente: {nomeDoCliente} - Falta: R$ {soma}");
+                            Console.WriteLine("Escolha uma forma de pagamento? \n 1/Dinheiro \n2/Cartão de debito. \n3/vale-refeição.");
+                            var pag = double.Parse(Console.ReadLine());
+                            //pagamento com duas pizza
+                            if(pag == 1){
+                                Pagamento.PagarEmDinheiro($"Qual é o valor:\nR$ {soma}\nTOTAL PAGO: R$ {soma}");
+                            }else if(pag == 2){
+                                 //Pagamento pagamento = new Pagamento();
+                                Pagamento.PagarComCartaoCredito($"Qual é o valor:\n R$ {soma}\nTOTAL PAGO: R$ {soma}");
+                            }else if(pag == 3){
+                                Pagamento.PagarComCartaoAlimentacao($"Qual é o valor:\n R$ {soma}\nTOTAL PAGO: R$ {soma}");
+                            }else{Console.WriteLine("Opção invalida");}
+                        
+                        
                     }
                 }    
             }
@@ -126,8 +141,11 @@ namespace Client
         }
     }
 }
+}else{
+    Console.WriteLine("ERRO: adcione uma pizza antes de ecolher outra opção!");
+    Console.WriteLine();
 }
 }
-}
+    }}
 
 //modificado

@@ -29,4 +29,9 @@ public class Pagamento
         Console.WriteLine("Processando pagamento com cartão de alimentação...");
         Console.WriteLine("Pagamento com cartão de alimentação concluído!");
     }
+    public static double Soma(double a , double b)
+    {
+        var soma = a + b;
+        return soma;
+    }
 }

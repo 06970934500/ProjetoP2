@@ -1,19 +1,12 @@
 ﻿
 using System;
-using System.Diagnostics;
-using Microsoft.VisualBasic;
-
-
-namespace Client
-{
+using System.Collections.Generic;
     public class Program
     {
         public static void Main()
         {
             Console.WriteLine("BEM VINDO A PIZZARIA LASABOR \n ESCOLA UMA OPÇÃO: \n 1/Adcionar Pizza. \n 2/Listar Pizza. \n 3/Criar novo pedido. \n 4/Listar pedido.");
             var opcao = double.Parse(Console.ReadLine());
-            
-
             if(opcao == 1)
             {
                 //primeira pizza
@@ -66,7 +59,8 @@ namespace Client
                     Console.WriteLine($"PEDIDO {pe}");
                     Console.WriteLine($"O nome do(a) Cliente é {nomeDoCliente}.");
                     Console.WriteLine($"O numero do(a) Cliente é {numeroDoCliente}.");
-                    Console.WriteLine($"{listaPizzaEsc[pesc]}-RS{listaPizzaEsc2[pesc]}");}
+                    Console.WriteLine($"{listaPizzaEsc[pesc]}-RS{listaPizzaEsc2[pesc]}");
+                    }
                     Console.WriteLine($"Total: {listaPizzaEsc2[pesc]}");
                     Console.WriteLine($"Quanto falta para pagar: {listaPizzaEsc2[pesc]}");
                     Console.WriteLine("pago: NÃO");
@@ -83,8 +77,7 @@ namespace Client
                             }else if(pag == 3){
                                 Pagamento.PagarComCartaoAlimentacao($"Qual é o valor:\n R${listaPizzaEsc2[pesc]}\nTOTAL PAGO: R${listaPizzaEsc2[pesc]}");
                             }else{Console.WriteLine("Opção invalida");}
-                }     
-                
+                }                     
             else if(pe == 1)
             {
                     Console.WriteLine($"Escolha uma pizza para adcionar. \n 0-{oNome}-R${oPreco} \n 1-{oNome2}-R${oPreco2}");
@@ -99,13 +92,10 @@ namespace Client
                     //var pizzaEscolhida3 = int.Parse(Console.ReadLine());
                     Console.WriteLine("Digite 2 para confiemar pedido.");
                     var listarPedidao = int.Parse(Console.ReadLine());
-            
             if(listarPedidao == 2){
-
                         double listarPedido = NovoPedido.ListarPedido();
                     if(listarPedido == 4 || pesc == 2)
                     {
-                        
                         if(pe == 1)
                         {  //pedido com duas pizza
                             Console.WriteLine($"O nome do(a) Cliente é {nomeDoCliente}.");
@@ -130,22 +120,17 @@ namespace Client
                                 Pagamento.PagarComCartaoCredito($"Qual é o valor:\n R$ {soma}\nTOTAL PAGO: R$ {soma}");
                             }else if(pag == 3){
                                 Pagamento.PagarComCartaoAlimentacao($"Qual é o valor:\n R$ {soma}\nTOTAL PAGO: R$ {soma}");
-                            }else{Console.WriteLine("Opção invalida");}
-                        
-                        
+                            }else{Console.WriteLine("Opção invalida");} 
                     }
                 }    
             }
-           
-
         }
     }
 }
 }else{
     Console.WriteLine("ERRO: adcione uma pizza antes de ecolher outra opção!");
     Console.WriteLine();
+        }
+    }
 }
-}
-    }}
-
 //modificado

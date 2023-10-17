@@ -5,7 +5,7 @@ using System.Collections.Generic;
     {
         public static void Main()
         {   double entrada = 0;
-            while(entrada != 4)
+            while(entrada != 1)
             {
             Console.WriteLine("BEM VINDO A PIZZARIA LASABOR \n ESCOLA UMA OPÇÃO: \n 1/Adcionar Pizza. \n 2/Listar Pizza. \n 3/Criar novo pedido. \n 4/Listar pedido.");
             var opcao = double.Parse(Console.ReadLine());
@@ -79,6 +79,7 @@ using System.Collections.Generic;
                             }else if(pag == 3){
                                 Pagamento.PagarComCartaoAlimentacao($"Qual é o valor:\n R${listaPizzaEsc2[pesc]}\nTOTAL PAGO: R${listaPizzaEsc2[pesc]}");
                             }else{Console.WriteLine("Opção invalida");}
+                            Console.WriteLine();
                 }                     
             else if(pe == 1)
             {
@@ -122,7 +123,8 @@ using System.Collections.Generic;
                                 Pagamento.PagarComCartaoCredito($"Qual é o valor:\n R$ {soma}\nTOTAL PAGO: R$ {soma}");
                             }else if(pag == 3){
                                 Pagamento.PagarComCartaoAlimentacao($"Qual é o valor:\n R$ {soma}\nTOTAL PAGO: R$ {soma}");
-                            }else{Console.WriteLine("Opção invalida");} 
+                            }else{Console.WriteLine("Opção invalida");}
+                            Console.WriteLine(); 
                     }
                 }    
             }

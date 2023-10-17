@@ -4,7 +4,9 @@ using System.Collections.Generic;
     public class Program
     {
         public static void Main()
-        {
+        {   double entrada = 0;
+            while(entrada != 4)
+            {
             Console.WriteLine("BEM VINDO A PIZZARIA LASABOR \n ESCOLA UMA OPÇÃO: \n 1/Adcionar Pizza. \n 2/Listar Pizza. \n 3/Criar novo pedido. \n 4/Listar pedido.");
             var opcao = double.Parse(Console.ReadLine());
             if(opcao == 1)
@@ -132,5 +134,5 @@ using System.Collections.Generic;
     Console.WriteLine();
         }
     }
-}
+}}
 //modificado
